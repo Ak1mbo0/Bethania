@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% load static %}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static "home_style.css" %}">
+    <meta charset="utf-8">
+    <title>Base</title>
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    <nav id="navbar">
+        <div class="nav-wrapper">
+            <a href="/"><img id="logo" src="https://media.discordapp.net/attachments/260428167888502785/643954266515439647/santa-cruz-logo.png" width="267" height="85"></a>
+            <p href="#!" class="brand-logo" id="title">Física - Santa Cruz</p>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="/" class="navbar-itens"><i class="material-icons">home</i></a></li>
+                <li><a href="" class="navbar-itens"><i class="material-icons">insert_drive_file</i></a></li>
+                <li><a href="videos/" class="navbar-itens"><i class="material-icons">video_library</i></a></li>
+                <li><a href="" class="navbar-itens"><i class="material-icons dp48">call</i></a></li>
+                <li><a href="search/" class="navbar-itens"><i class="material-icons">search</i></a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+    {% block content %}
+
+    {% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Query</title>
+    {% block head %}
+    <style>
+
+        body {
+            height: 101vh;
+        }
+
+        #tudo {
+            position: relative;
+            padding-top: 4%;
+            padding-left: 1%;
+        }
+
+
+    </style>
+    {% endblock %}
+</head>
+<body>
+
+{% block content %}
+
+<div id="tudo">
+
+    <h3>Pesquisar uma ficha:</h3>
+
+        <form class="form-inline">
+            <input class="form-control mr-sm-2"
+                   type="search" placeholder="Search"
+                   aria-label="Search"
+                   name="search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-bt">Search</button>
+        </form>
+
+        <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Download</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for ficha in fichas %}
+                        <tr>
+                            <td>{{ ficha.Titulo }}</td>
+                            <td> <a href="{{ ficha.Documento.url }}" target="_blank"> Acessar </a></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+        </table>
+
+
+</div>
+
+{% endblock %}
+
+
+</body>
+</html>

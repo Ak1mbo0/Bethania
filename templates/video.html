@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+        {% load embed_video_tags %}
+        <title>Title</title>
+
+        <style>
+
+            .table {
+                position: relative;
+                top: 40%;
+                padding-top: 40%;
+            }
+
+        </style>
+    {% endblock %}
+
+</head>
+<body>
+
+{% block content %}
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Download</th>
+                <th>Video</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for video in videos %}
+                <tr>
+                    <td>{{ video.Titulo }}</td>
+                    <td>
+                        {% video video.Video as my_video %}
+  <pre>
+    Backend: {{ my_video.backend }}
+    URL: {{ my_video.url }}
+    Code: {{ my_video.code }}
+    Thumbnail: {{ my_video.thumbnail }}
+    HTTPS: {% if my_video.protocol == 'https' %}Yes{% else %}No{% endif %}</pre>
+
+  {% video my_video "small" %}
+{% endvideo %}
+                    </td>
+                    <td>
+                        <a href="{{ video.url }}" >{{ video.url }}</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+
+</table>
+
+
+{% endblock %}
+
+</body>
+</html>
