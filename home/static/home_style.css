@@ -5,11 +5,7 @@
     text-align: justify;
 }
 
-body {
-  margin: 0 -9999rem;
-  /* add back negative margin value */
-  padding: 0.25rem 9999rem;
-}
+html, body { margin:0; padding:0 }
 
 #navbar {
     position: fixed;
@@ -25,9 +21,9 @@ body {
 }
 
 #title {
+    font-weight: bold;
     position: relative;
-    margin: auto;
-    padding: auto;
+    left: 34%;
 }
 
 #title:hover {
@@ -71,8 +67,6 @@ body {
     align-content: flex-end;
     justify-content: space-around;
     align-items: flex-end;
-    padding-left: 4%;
-    margin-right: 4%;
     background-color: #f6f6f6;
 }
 
@@ -80,28 +74,44 @@ body {
     position: relative;
     height: 100vh;
     width: 50vw;
-    padding-left: 20%;
+    margin-left: 35%;
 }
 
 .cards-right {
     height: 100vh;
     width: 50vw;
     justify-content: right;
-    padding-left: 50px;
+    margin-right: 35%;
+    position: relative;
+    margin-bottom: 0.25%;
+}
+
+.cards-left {
+    height: 100vh;
+    width: 50vw;
+    justify-content: right;
+    margin-left: 39%;
 }
 
 .cartao {
-    width: 472px;
-    height: 221.750px;
-    margin-top: 50px;
+    width: 88%;
+    height: 23%;
+    margin-top: 10%;
     background-color: ghostwhite;
 
+}
+
+#card-ficha{
+    width: 93.5%;
+}
+
+#card-videos{
+    width: 93.5%;
 }
 
 .bt-cartao {
     position: relative;
     left: 18%;
-    top: 20px;
     box-shadow: 5px 5px 15px #c2c2c2;
     color: whitesmoke;
     font-weight: bold;
@@ -163,8 +173,10 @@ body {
     font-weight: bold;
     font-size: 300%;
     position: relative;
-    padding: auto;
-    margin: auto;
+    top: 5%;
+    padding-top: 2%;
+
+
 }
 
 #main2 {
