@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-
+PROJECT_DIR=os.path.dirname(__file__)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -108,6 +108,16 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+MIDDLEWARE_CLASSES = (
+    # Simplified static file serving.
+    # https://warehouse.python.org/project/whitenoise/
+    'whitenoise.middleware.WhiteNoiseMiddleware',)
+
+# Simplified static file serving.
+# https://warehouse.python.org/project/whitenoise/
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
@@ -128,6 +138,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'home/static')
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'fichas')
 
 MEDIA_URL = '/fichas/'
@@ -135,5 +147,6 @@ MEDIA_URL = '/fichas/'
 EMBED_VIDEO_BACKENDS = (
     'embed_video.backends.YoutubeBackend',
 )
+
 
 

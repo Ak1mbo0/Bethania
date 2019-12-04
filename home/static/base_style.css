@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    text-align: justify;
+}
+
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    margin-top: 10vh;
+}
+
+#navbar {
+    margin-top: -10vh;
+    position: fixed;
+    z-index: 100;
+    background-image: linear-gradient(to right, #0575e6 , #000046);
+    height: 10vh;
+
+}
+
+.nav-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-itens:hover {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+#title {
+    position: relative;
+    margin: auto;
+    padding: auto;
+}
+
+#title:hover {
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    cursor: default;
+}
+
+#logo {
+    position: relative;
+    height: 4vw;
+    width: auto;
+    left: 0.5vw;
+}
+
