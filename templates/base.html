@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{% static "base_style.css" %}">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width; user-scalable=yes">
     <title>Base</title>
     {% block head %}
     {% endblock %}
@@ -29,9 +30,9 @@
             <ul class="right hide-on-med-and-down">
                 <li><a href="/" class="navbar-itens"><i class="material-icons">home</i></a></li>
                 <li><a href="" class="navbar-itens"><i class="material-icons">insert_drive_file</i></a></li>
-                <li><a href="videos/" class="navbar-itens"><i class="material-icons">video_library</i></a></li>
+                <li><a href="/videos/" class="navbar-itens"><i class="material-icons">video_library</i></a></li>
                 <li><a href="" class="navbar-itens"><i class="material-icons dp48">call</i></a></li>
-                <li><a href="search/" class="navbar-itens"><i class="material-icons">search</i></a></li>
+                <li><a href="/search/" class="navbar-itens"><i class="material-icons">search</i></a></li>
 
             </ul>
         </div>
@@ -40,6 +41,8 @@
     {% block content %}
 
     {% endblock %}
+
+
 
 </body>
 </html>
