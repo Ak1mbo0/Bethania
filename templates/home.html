@@ -20,15 +20,64 @@
     {% block content %}
 
         {#  Slick  #}
-
-            <div class="slick-container">
-                <div class="slick-item"><img src="" alt=""></div>
-                <div class="slick-item"><img src="" alt=""></div>
-                <div class="slick-item"><img src="" alt=""></div>
+            <div class="fase" id="fase1">
+                <div class="slick-container">
+                    <div class="slick-item"><img src="https://www.fbvcursos.com/uploads/courses/2017/12/fisica-conteudos-do-ensino-fundamental-e-do-ensino-medio-1512239408.jpg" alt=""></div>
+                    <div class="slick-item"><img src="https://i.ytimg.com/vi/OBSF3_KUn5w/maxresdefault.jpg" alt=""></div>
+                    <div class="slick-item"><img src="https://imagenes.universia.net/gc/net/images/educacion/p/pr/pro/professor-ensina-como-estudar-fisica-para-o-enem-2014.PNG" alt=""></div>
+                </div>
             </div>
 
         {#  Cards  #}
 
+            <div class="fase" id="fase2">
+
+                <h2 id="title-2">Utilidades</h2>
+
+                <div class="cards-container flex-wrap">
+
+                    <div class="cards" id="card1">
+                         <div class="card-semi">
+                             <h4 class="card-title">Fichas</h4>
+                             <p class="card-text">Aqui, você encontrará todas as fichas necessárias para o curso.</p>
+                             <a class="btn btncursos btndsia btn__active bt-cartao" href="/" id="bt-fichas">Saiba Mais</a>
+                         </div>
+                         <div class="faixa" id="faixa1"></div>
+                    </div>
+
+                    <div class="cards" id="card2">
+                        <div class="card-semi">
+                            <h4 class="card-title">Vídeos</h4>
+                            <p class="card-text">Aqui, você encontrará todas as vídeo-aulas disponibilizadas.</p>
+                            <a class="btn btncursos btndsia btn__active bt-cartao" href="/" id="bt-videos">Saiba Mais</a>
+                        </div>
+                        <div class="faixa" id="faixa2"></div>
+                    </div>
+
+                    <div class="cards" id="card3">
+                        <div class="card-semi">
+                            <h4 class="card-title">Relatórios</h4>
+                            <p class="card-text">Aqui, você encontrará todos os relatórios precisos.</p>
+                            <a class="btn btncursos btndsia btn__active bt-cartao" href="/" id="bt-relatorio">Saiba Mais</a>
+                        </div>
+                        <div class="faixa" id="faixa3"></div>
+                    </div>
+
+                    <div class="cards" id="card4">
+                        <img class="icons" src="{% static "imagens/contatos.png" %}" alt="">
+                        <div class="card-semi">
+                            <h4 class="card-title">Contato</h4>
+                            <p class="card-text">Aqui, você encontrará todo tipo de contato necessário.</p>
+                            <a class="btn btncursos btndsia btn__active bt-cartao" href="/" id="bt-contato">Saiba Mais</a>
+                        </div>
+                        <div class="faixa" id="faixa4"></div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
 
         {#  JavaScript  #}
 
@@ -44,7 +93,8 @@
                         autoplaySpeed: 5000,
                         slidesToShow: 1,
                         centerMode: true,
-                        centerPadding: "5vw"
+                        centerPadding: "5vw",
+                        infinite: true,
                     });
                 });
             </script>

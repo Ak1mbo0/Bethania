@@ -12,11 +12,12 @@ body {
 }
 
 #navbar {
-    margin-top: -10vh;
+    top: 0;
     position: fixed;
     z-index: 100;
     background-image: linear-gradient(to right, #0575e6 , #000046);
     height: 10vh;
+    width: 100vw;
 
 }
 
@@ -34,7 +35,6 @@ body {
 #title {
     position: relative;
     margin: auto;
-    padding: auto;
 }
 
 #title:hover {
@@ -49,5 +49,13 @@ body {
     height: 4vw;
     width: auto;
     left: 0.5vw;
+}
+
+#div-icons {
+    width: 25vw;
+}
+
+#div-logo {
+    width: 25vw;
 }
 
