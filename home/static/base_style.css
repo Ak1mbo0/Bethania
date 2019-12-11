@@ -35,6 +35,7 @@ body {
 #title {
     position: relative;
     margin: auto;
+    font-weight: bold;
 }
 
 #title:hover {

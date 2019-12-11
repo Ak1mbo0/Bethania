@@ -7,11 +7,11 @@
         {% load static %}
         <meta charset="UTF-8">
         <title>Home</title>
-        <link rel="stylesheet" href= "{% static "home_style.css" %}">
 
         {#  Links Slick  #}
-        <link rel="stylesheet" href="{% static "slick_arquivos/css/slick.css" %}">
         <link rel="stylesheet" href="{% static "slick_arquivos/css/slick-theme.css" %}">
+        <link rel="stylesheet" href="{% static "slick_arquivos/css/slick.css" %}">
+        <link rel="stylesheet" href= "{% static "home_style.css" %}">
 
     {% endblock %}
 </head>
@@ -35,29 +35,31 @@
                 <h2 id="title-2">Utilidades</h2>
 
                 <div class="cards-container flex-wrap">
-
                     <div class="cards" id="card1">
+                        <img class="icons" src="{% static "imagens/fichas.png" %}" alt="">
                          <div class="card-semi">
                              <h4 class="card-title">Fichas</h4>
-                             <p class="card-text">Aqui, você encontrará todas as fichas necessárias para o curso.</p>
+                             <p class="card-text">Aqui, você encontrará todas as fichas necessárias.</p>
                              <a class="btn btncursos btndsia btn__active bt-cartao" href="/" id="bt-fichas">Saiba Mais</a>
                          </div>
                          <div class="faixa" id="faixa1"></div>
                     </div>
 
                     <div class="cards" id="card2">
+                        <img class="icons" src="{% static "imagens/videos.png" %}" alt="">
                         <div class="card-semi">
                             <h4 class="card-title">Vídeos</h4>
-                            <p class="card-text">Aqui, você encontrará todas as vídeo-aulas disponibilizadas.</p>
-                            <a class="btn btncursos btndsia btn__active bt-cartao" href="/" id="bt-videos">Saiba Mais</a>
+                            <p class="card-text">Aqui, você encontrará todos os vídeos disponibilizados.</p>
+                            <a class="btn btncursos btndsia btn__active bt-cartao" href="/videos" id="bt-videos">Saiba Mais</a>
                         </div>
                         <div class="faixa" id="faixa2"></div>
                     </div>
 
                     <div class="cards" id="card3">
+                        <img class="icons" src="{% static "imagens/aulas.png" %}" alt="">
                         <div class="card-semi">
-                            <h4 class="card-title">Relatórios</h4>
-                            <p class="card-text">Aqui, você encontrará todos os relatórios precisos.</p>
+                            <h4 class="card-title">Aulas</h4>
+                            <p class="card-text">Aqui, você encontrará todas as aulas disponibilizadas.</p>
                             <a class="btn btncursos btndsia btn__active bt-cartao" href="/" id="bt-relatorio">Saiba Mais</a>
                         </div>
                         <div class="faixa" id="faixa3"></div>
@@ -95,10 +97,12 @@
                         centerMode: true,
                         centerPadding: "5vw",
                         infinite: true,
+                        prevArrow: "<a id='seta-esquerda'><img  src='{% static 'imagens/seta-esquerda.png' %}'></a>",
+                        nextArrow: "<a id='seta-direita'><img src='{% static 'imagens/seta-direita.png' %}'></a>"
+
                     });
                 });
             </script>
-
 
 
     {% endblock %}
