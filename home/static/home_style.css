@@ -4,19 +4,19 @@ html, body {
 }
 
 .slick-container {
-    width: 80vw;
+    width: 90vw;
     height: 36vw;
     margin: auto;
 
 }
 
 .slick-item{
-    width: 80vw;
+    width: 90vw;
     height: 36vw;
 }
 
 .slick-slide {
-    margin: 0 7vw 0 7vw;
+    margin: 0 10vw 0 10vw;
 }
 
 .slick-item img {
@@ -39,8 +39,16 @@ html, body {
     height: auto;
     background-color: lightgray;
     position: relative;
-    z-index: 1;
 
+}
+
+#triangulo {
+    width: 5vw;
+    height: auto;
+    margin-top: -0.6vw;
+    margin-left: 47.3vw;
+    z-index: 2;
+    position: absolute;
 }
 
 #bolinhas {
@@ -247,7 +255,7 @@ ul.slick-dots{
     position: absolute;
     top: 35vh;
     right: 5vw;
-    background-color: #4d4dff;
+    background-image: linear-gradient(to right, #000046, #0575e6 );
     border-radius: 1.5vw;
     z-index: 70;
 }
@@ -257,8 +265,9 @@ ul.slick-dots{
     width: 3vw;
     position: absolute;
     left: 5vw;
+    background-image: linear-gradient(to right, #0575e6 , #000046);
     top: 35vh;
-    background-color: #4d4dff;
+
     border-radius: 1.5vw;
     z-index: 70;
 }
@@ -281,6 +290,7 @@ ul.slick-dots{
 
     .cards {
         height: 28vh;
+        margin-bottom: 7.2vh;
     }
 
 }

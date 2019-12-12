@@ -109,15 +109,28 @@ body {
 @media (min-width: 1900px){
 
     body{
-        margin-top: 9vh;
+        margin-top: 8vh;
     }
 
     #fase1{
-        margin-top: 9vh;
+        margin-top: 8vh;
     }
     #navbar{
         width: 100vw;
-        height: 9vh;
+        height: 8vh;
     }
+
+    #logo {
+        height: 3.3vw;
+    }
+
+    #title {
+        font-size: 2vw;
+    }
+
+    .material-icons {
+        font-size: 1.5vw !important;
+    }
+
 
 }
