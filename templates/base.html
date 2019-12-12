@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="{% static "base_style.css" %}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width; user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Base</title>
     {% block head %}
     {% endblock %}
@@ -26,14 +27,14 @@
     <nav id="navbar">
         <div class="nav-wrapper">
             <div id="div-logo"><a href="/"><img id="logo" src="https://media.discordapp.net/attachments/260428167888502785/643954266515439647/santa-cruz-logo.png" width="267" height="85"></a></div>
-            <p href="#!" class="brand-logo" id="title">Física - Santa Cruz</p>
+            <p href="#!"  id="title">Física - Santa Cruz</p>
             <div id="div-icons">
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="/" class="navbar-itens"><i class="material-icons">home</i></a></li>
-                    <li><a href="" class="navbar-itens"><i class="material-icons">insert_drive_file</i></a></li>
-                    <li><a href="/videos/" class="navbar-itens"><i class="material-icons">video_library</i></a></li>
-                    <li><a href="" class="navbar-itens"><i class="material-icons dp48">call</i></a></li>
-                    <li><a href="/search/" class="navbar-itens"><i class="material-icons">search</i></a></li>
+                <ul class="right ">
+                    <li><a href="/" class="navbar-itens"><i class="material-icons ">home</i></a></li>
+                    <li><a href="" class="navbar-itens"><i class="material-icons ">insert_drive_file</i></a></li>
+                    <li><a href="/videos/" class="navbar-itens"><i class="material-icons ">video_library</i></a></li>
+                    <li><a href="" class="navbar-itens"><i class="material-icons dp48 ">call</i></a></li>
+                    <li><a href="/search/" class="navbar-itens"><i class="material-icons ">search</i></a></li>
 
                 </ul>
             </div>
@@ -44,7 +45,14 @@
 
     {% endblock %}
 
+    <footer class="site-footer" style="padding-top: 15px; background-color: #000046;">
 
+        <div class="footer-text" style="margin: auto 0;font-size: 14px;">
+            <a> Colégio Santa Cruz - © 2019 EFGL OBAOBA3 Inc. S.A.</a> <br>
+            <a> Av. Arruda Botelho, 255 Alto de Pinheiros - SP</a>
+        </div>
+
+    </footer>
 
 </body>
 </html>

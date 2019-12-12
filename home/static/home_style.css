@@ -16,7 +16,7 @@ html, body {
 }
 
 .slick-slide {
-    margin: 0 5vw 0 5vw;
+    margin: 0 7vw 0 7vw;
 }
 
 .slick-item img {
@@ -111,6 +111,7 @@ html, body {
 .card-text {
     margin-top: 4vh;
     width: 50%;
+    font-size: 1.18vw;
 }
 
 .cards p {
@@ -120,9 +121,12 @@ html, body {
 
 .bt-cartao {
     width: 10vw;
+    height: 5.5vh;
     margin: auto;
     color: white;
     font-weight: bold;
+    font-size: 1.1vw;
+    line-height: 1.6vw;
 }
 
 .bt-cartao:hover {
@@ -269,4 +273,15 @@ ul.slick-dots{
     width: 100%;
 }
 
+@media (min-width: 1900px){
+
+    .bt-cartao {
+        height: 4.2vh;
+    }
+
+    .cards {
+        height: 28vh;
+    }
+
+}
 

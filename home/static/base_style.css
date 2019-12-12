@@ -24,6 +24,11 @@ body {
 .nav-wrapper{
     display: flex;
     justify-content: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    margin-right: 0.5vw;
+    margin-left: 0.5vw;
 }
 
 .navbar-itens:hover {
@@ -36,6 +41,10 @@ body {
     position: relative;
     margin: auto;
     font-weight: bold;
+    font-size: 2.5vw;
+    width: 50vw;
+    height: auto;
+    text-align: center;
 }
 
 #title:hover {
@@ -46,17 +55,69 @@ body {
 }
 
 #logo {
-    position: relative;
+    position: absolute;
     height: 4vw;
     width: auto;
-    left: 0.5vw;
+    top: 1vh;
+
 }
 
 #div-icons {
     width: 25vw;
+    height: auto;
+
 }
+
 
 #div-logo {
     width: 25vw;
+    height: auto;
+
 }
 
+.navbar-itens {
+    position: relative;
+    width: 4vw;
+    height: auto;
+
+}
+
+.navbar-itens .material-icons{
+    font-size: 2vw;
+}
+
+.site-footer {
+    background: #15459c ;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    color: #fff;
+    font-size: 1vw;
+    width: 100vw;
+    height: 10vh;
+
+  }
+
+.footer-text {
+    text-align: center;
+}
+
+
+@media (min-width: 1900px){
+
+    body{
+        margin-top: 9vh;
+    }
+
+    #fase1{
+        margin-top: 9vh;
+    }
+    #navbar{
+        width: 100vw;
+        height: 9vh;
+    }
+
+}
