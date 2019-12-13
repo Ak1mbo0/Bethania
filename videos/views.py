@@ -7,4 +7,6 @@ from upload.models import Video
 class Video_list_view(ListView):
     template_name = "video.html"
     model = Video
-    context_object_name = "videos"
+    queryset = Video.objects.filter(Status='p')
+    context_object_name = 'videos'
+

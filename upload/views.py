@@ -14,7 +14,3 @@ def query(request):
         context['url'] = fs.url(name)
     return render(request, 'query.html', context)
 
-class VideoListView(ListView):
-    model = Video
-    template_name = 'video_list.html'
-    context_object_name = 'videos'

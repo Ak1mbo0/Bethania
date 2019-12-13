@@ -6,11 +6,12 @@
     <meta charset="UTF-8">
     <title>Query</title>
     {% block head %}
+        {% load embed_video_tags %}
     <style>
 
         body{
             min-height: 90vh;
-            position: relative
+            position: relative;
             padding-bottom: 10vh;
         }
 
@@ -41,10 +42,49 @@
                    type="search" placeholder="Search"
                    aria-label="Search"
                    name="search">
+            <input name="Document" list="document">
+            <datalist id="document">
+                    <option value="Ficha">
+                    <option value="Video">
+            </datalist>
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-bt">Search</button>
         </form>
 
+    {% if tipo == 'Video' %}
         <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Download</th>
+                    </tr>
+                </thead>
+                <tbody>
+            {% for video in videos %}
+                <tr>
+                    <td>{{ video.Titulo }}</td>
+                    <td>
+                        {% video video.Video as my_video %}
+  <pre>
+    Backend: {{ my_video.backend }}
+    URL: {{ my_video.url }}
+    Code: {{ my_video.code }}
+    Thumbnail: {{ my_video.thumbnail }}
+    HTTPS: {% if my_video.protocol == 'https' %}Yes{% else %}No{% endif %}</pre>
+
+  {% video my_video "small" %}
+{% endvideo %}
+                    </td>
+                    <td>
+                        <a href="{{ video.url }}" >{{ video.url }}</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+        </table>
+ {% endif %}
+
+{% if tipo == 'Ficha' %}
+ <table class="table">
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -60,8 +100,7 @@
                     {% endfor %}
                 </tbody>
         </table>
-
-
+{% endif %}
 </div>
 
 
