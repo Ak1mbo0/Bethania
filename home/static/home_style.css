@@ -63,7 +63,7 @@ html, body {
 #title-2{
     text-align: center;
     font-weight: bold;
-    padding-top: 3vh;
+    padding-top: 4vh;
     font-size: 3vw;
     z-index: 10;
     position: relative;
@@ -117,6 +117,7 @@ html, body {
     font-weight: bold;
     text-align: center;
     margin-top: 2vh;
+    font-size: 2vw;
 }
 
 .card-text {
