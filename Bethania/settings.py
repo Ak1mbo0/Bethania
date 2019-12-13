@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     "home",
     "upload",
     "search",
-    "videos"
+    "videos",
+    "files"
 ]
 
 MIDDLEWARE = [
