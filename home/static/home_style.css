@@ -139,6 +139,7 @@ html, body {
     font-weight: bold;
     font-size: 1.1vw;
     line-height: 1.6vw;
+    transition: 1s;
 }
 
 .bt-cartao:hover {
@@ -157,7 +158,7 @@ html, body {
 }
 
 #bt-relatorio {
-    background: linear-gradient(to right, #ecd647, #dc9a43);
+    background: linear-gradient(to right, rgb(179,225,53), rgb(123,164,7));
 }
 
 #bt-contato {
@@ -186,7 +187,7 @@ html, body {
 }
 
 #faixa3 {
-    background: linear-gradient(to bottom, #ecd647, #dc9a43);
+    background: linear-gradient(to bottom, rgb(179,225,53), rgb(123,164,7));;
 }
 
 #faixa4 {

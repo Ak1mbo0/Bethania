@@ -37,16 +37,24 @@ body {
     position: relative;
     width: 4vw;
     height: auto;
+    display: flex;
+    justify-content: center;
 
 }
 
-.navbar-itens:hover {
+.navbar-itens:hover{
     text-decoration: none;
     font-weight: bold;
     color: white;
 }
 
-.navbar-itens:after {
+.material-icons:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+.material-icons:after {
   display:block;
   content: '';
     margin-top: -1vh;
@@ -54,7 +62,7 @@ body {
   transform: scaleX(0);
   transition: transform 250ms ease-in-out;
 }
-.navbar-itens:hover:after { transform: scaleX(1); }
+.material-icons:hover:after { transform: scaleX(1); }
 
 #title {
     position: relative;
@@ -146,6 +154,10 @@ body {
 
     .material-icons {
         font-size: 1.5vw !important;
+    }
+
+    .site-footer {
+        height: 10vh;
     }
 
 
