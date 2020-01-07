@@ -5,59 +5,92 @@
 <head>
     {% block head %}
         {% load embed_video_tags %}
+        {% load static %}
+        <link rel="stylesheet" href="{% static "video_style.css" %}">
         <title>Title</title>
-
-        <style>
-
-            .table {
-                position: relative;
-                top: 40%;
-                padding-top: 40%;
-            }
-
-        </style>
     {% endblock %}
 
 </head>
 <body>
 
-{% block content %}
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Download</th>
-                <th>Video</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for video in videos %}
-                <tr>
-                    <td>{{ video.Titulo }}</td>
-                    <td>
+    {% block content %}
+        <div class="bloco" id="primeiro-bloco">
+            <h3 class="title-periodos">1º Período</h3>
+            <div class="bloco-content">
+                {% for video in videos %}
+                    {% if video.Periodo == "1" and video.Status == "p" %}
                         {% video video.Video as my_video %}
-  <pre>
-    Backend: {{ my_video.backend }}
-    URL: {{ my_video.url }}
-    Code: {{ my_video.code }}
-    Thumbnail: {{ my_video.thumbnail }}
-    HTTPS: {% if my_video.protocol == 'https' %}Yes{% else %}No{% endif %}</pre>
+                <iframe id="1" class="videos" src="{{ my_video.url }}"></iframe>
+                        {% endvideo %}
+                    {% endif %}
+                {% endfor %}
+            </div>
 
-  {% video my_video "small" %}
-{% endvideo %}
-                    </td>
-                    <td>
-                        <a href="{{ video.url }}" >{{ video.url }}</a>
-                    </td>
-                </tr>
-            {% endfor %}
-        </tbody>
-
-</table>
+        </div>
 
 
-{% endblock %}
+        <div class="bloco" id="segundo-bloco">
+            <h3 class="title-periodos">2º Período</h3>
+            <div class="bloco-content">
+                {% for video in videos %}
+                    {% if video.Periodo == "2" and video.Status == "p" %}
+                        {% video video.Video as my_video %}
+                <iframe id="1" class="videos" src="{{ my_video.url }}"></iframe>
+                        {% endvideo %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="bloco" id="terceiro-bloco">
+            <h3 class="title-periodos">3º Período</h3>
+            <div class="bloco-content">
+                {% for video in videos %}
+                    {% if video.Periodo == "3" and video.Status == "p" %}
+                        {% video video.Video as my_video %}
+                <iframe id="1" class="videos" src="{{ my_video.url }}"></iframe>
+                        {% endvideo %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+    {% endblock %}
+
 
 </body>
 </html>
+
+{#    <table class="table">#}
+{#        <thead>#}
+{#            <tr>#}
+{#                <th>Name</th>#}
+{#                <th>Download</th>#}
+{#                <th>Video</th>#}
+{#            </tr>#}
+{#        </thead>#}
+{#        <tbody>#}
+{#            {% for video in videos %}#}
+{#                <tr>#}
+{#                    <td>{{ video.Titulo }}</td>#}
+{#                    <td>#}
+{#                        {% video video.Video as my_video %}#}
+{#  <pre>#}
+{#    Backend: {{ my_video.backend }}#}
+{#    URL: {{ my_video.url }}#}
+{#    Code: {{ my_video.code }}#}
+{#    Thumbnail: {{ my_video.thumbnail }}#}
+{#    HTTPS: {% if my_video.protocol == 'https' %}Yes{% else %}No{% endif %}</pre>#}
+{##}
+{#  {% video my_video "small" %}#}
+{#{% endvideo %}#}
+{#                    </td>#}
+{#                    <td>#}
+{#                        <a href="{{ video.url }}" >{{ video.url }}</a>#}
+{#                    </td>#}
+{#                </tr>#}
+{#            {% endfor %}#}
+{#        </tbody>#}
+{##}
+{#</table>#}
+

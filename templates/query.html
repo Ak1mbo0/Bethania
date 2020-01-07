@@ -39,6 +39,11 @@
                    type="search" placeholder="Search"
                    aria-label="Search"
                    name="search">
+            <input name="Document" list="document">
+            <datalist id="document">
+                    <option value="Ficha">
+                    <option value="Video">
+            </datalist>
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-bt">Search</button>
         </form>
 
@@ -51,10 +56,12 @@
                 </thead>
                 <tbody>
                     {% for ficha in fichas %}
+                        {% if ficha.Status == "p" %}
                         <tr>
                             <td>{{ ficha.Titulo }}</td>
                             <td> <a href="{{ ficha.Documento.url }}" target="_blank"> Acessar </a></td>
                         </tr>
+                        {% endif %}
                     {% endfor %}
                 </tbody>
         </table>

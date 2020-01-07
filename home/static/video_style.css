@@ -1,0 +1,46 @@
+.bloco {
+    width: 100vw;
+    height: 60vh;
+}
+
+#primeiro-bloco {
+    background-color: white;
+}
+
+#segundo-bloco {
+    background-color: whitesmoke;
+}
+
+#terceiro-bloco {
+    background-color: #a17573;
+}
+
+.title-periodos {
+    padding-top: 2vh;
+    padding-left: 2vw;
+    width: 100vw;
+    font-weight: bold;
+    font-size: 1.5vw;
+}
+
+.bloco-content {
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.videos {
+    margin: 2vw;
+    border-radius: 1vw;
+    height: 20vh;
+    width: 19vw;
+    transition: 1s;
+}
+
+.videos:hover{
+    transition: 1s;
+    transform: scale(1.15);
+}
