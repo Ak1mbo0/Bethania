@@ -1,18 +1,40 @@
 .bloco {
     width: 100vw;
-    height: 60vh;
+    min-height: 60vh;
+}
+
+#div-gelo {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+
+}
+
+
+.bt-gelo {
+    margin-top: 2vh;
+}
+
+#div-gelo div {
+    width: calc(100%/3);
+    height: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 #primeiro-bloco {
-    background-color: white;
-}
-
-#segundo-bloco {
     background-color: whitesmoke;
 }
 
+#segundo-bloco {
+    background-color: lightgrey;
+}
+
 #terceiro-bloco {
-    background-color: #a17573;
+    background-color: whitesmoke;
 }
 
 .title-periodos {
@@ -44,3 +66,32 @@
     transition: 1s;
     transform: scale(1.15);
 }
+
+.bt-cartao {
+    width: 10vw;
+    height: 5.5vh;
+    margin: auto;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1vw;
+    line-height: 1.6vw;
+    transition: 1s;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+}
+
+.bt-cartao:hover {
+    color: whitesmoke;
+    transform: translate(5px, 5px);
+    box-shadow: none;
+    transition: 1s;
+}
+
+#bt-gelo-2 {
+    background: linear-gradient(to right, #27B5B5, #5F958B);
+}
+
+#bt-gelo-1, #bt-gelo-3 {
+    background: linear-gradient(to right, #f3f3f3, #dedede);
+    color: grey;
+}
+

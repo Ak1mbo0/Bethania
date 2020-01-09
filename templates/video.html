@@ -1,19 +1,26 @@
 {% extends "base.html" %}
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
     {% block head %}
         {% load embed_video_tags %}
         {% load static %}
         <link rel="stylesheet" href="{% static "video_style.css" %}">
-        <title>Title</title>
+        <title>Vídeos</title>
+
     {% endblock %}
 
-</head>
-<body>
-
     {% block content %}
+
+        <div id="div-gelo">
+
+            <div class="content"><a class="btn btncursos btndsia btn__active bt-cartao bt-gelo" href="/fichas" id="bt-gelo-1">Fichas</a></div>
+            <div class="content"><a class="btn btncursos btndsia btn__active bt-cartao bt-gelo" href="/videos" id="bt-gelo-2">Vídeos</a></div>
+            <div class="content"><a class="btn btncursos btndsia btn__active bt-cartao bt-gelo" href="/" id="bt-gelo-3">Aulas</a></div>
+
+        </div>
+
+
+
+
         <div class="bloco" id="primeiro-bloco">
             <h3 class="title-periodos">1º Período</h3>
             <div class="bloco-content">
@@ -56,41 +63,4 @@
         </div>
 
     {% endblock %}
-
-
-</body>
-</html>
-
-{#    <table class="table">#}
-{#        <thead>#}
-{#            <tr>#}
-{#                <th>Name</th>#}
-{#                <th>Download</th>#}
-{#                <th>Video</th>#}
-{#            </tr>#}
-{#        </thead>#}
-{#        <tbody>#}
-{#            {% for video in videos %}#}
-{#                <tr>#}
-{#                    <td>{{ video.Titulo }}</td>#}
-{#                    <td>#}
-{#                        {% video video.Video as my_video %}#}
-{#  <pre>#}
-{#    Backend: {{ my_video.backend }}#}
-{#    URL: {{ my_video.url }}#}
-{#    Code: {{ my_video.code }}#}
-{#    Thumbnail: {{ my_video.thumbnail }}#}
-{#    HTTPS: {% if my_video.protocol == 'https' %}Yes{% else %}No{% endif %}</pre>#}
-{##}
-{#  {% video my_video "small" %}#}
-{#{% endvideo %}#}
-{#                    </td>#}
-{#                    <td>#}
-{#                        <a href="{{ video.url }}" >{{ video.url }}</a>#}
-{#                    </td>#}
-{#                </tr>#}
-{#            {% endfor %}#}
-{#        </tbody>#}
-{##}
-{#</table>#}
 
