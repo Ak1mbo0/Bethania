@@ -3,9 +3,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    {% block head  %}
     <meta charset="UTF-8">
     <title>Query</title>
-    {% block head %}
+    {% load embed_video_tags %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static "video_style.css" %}">
     <style>
 
         body {
@@ -39,7 +42,7 @@
                    type="search" placeholder="Search"
                    aria-label="Search"
                    name="search">
-            <input name="Document" list="document">
+            <input name="Document" list="document" placeholder="Escolha o tipo de arquivo">
             <datalist id="document">
                     <option value="Ficha">
                     <option value="Video">
@@ -47,6 +50,7 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-bt">Search</button>
         </form>
 
+        {% if search_filter == 'Ficha' %}
         <table class="table">
                 <thead>
                     <tr>
@@ -65,7 +69,21 @@
                     {% endfor %}
                 </tbody>
         </table>
+        {% endif %}
 
+        {% if search_filter == 'Video' %}
+        <div class="bloco" id="primeiro-bloco">
+            <div class="bloco-content">
+                {% for video in videos %}
+                    {% if  video.Status == "p" %}
+                        {% video video.Video as my_video %}
+                <iframe id="1" class="videos" src="{{ my_video.url }}"></iframe>
+                        {% endvideo %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
 
 </div>
 

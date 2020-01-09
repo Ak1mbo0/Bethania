@@ -4,6 +4,7 @@ from embed_video.admin import AdminVideoMixin
 
 ####
 
+
 class FichaAdmin(admin.ModelAdmin):
     list_display = ['Titulo', 'Tema', 'Documento', 'Status']
     ordering = ['Tema']
@@ -20,7 +21,7 @@ class FichaAdmin(admin.ModelAdmin):
     make_hidden.short_description = "Esconder itens selecionados"
 
 
-class MyModelAdmin(AdminVideoMixin, admin.ModelAdmin):
+class VideoAdmin(AdminVideoMixin, admin.ModelAdmin):
     list_display = ('Video', 'Titulo', 'Tema', 'Status')
     ordering = ['Tema']
     actions = ['make_published', 'make_hidden']
@@ -29,6 +30,7 @@ class MyModelAdmin(AdminVideoMixin, admin.ModelAdmin):
         queryset.update(Status='p')
 
     make_published.short_description = "Publicar itens selecionados"
+
     def make_hidden(modeladmin, request, queryset):
         queryset.update(Status='h')
 
@@ -36,8 +38,8 @@ class MyModelAdmin(AdminVideoMixin, admin.ModelAdmin):
 
 
 # Register your models here.
-admin.site.register(Ficha)
-admin.site.register(Video, MyModelAdmin)
+admin.site.register(Ficha, FichaAdmin)
+admin.site.register(Video, VideoAdmin)
 
 
 
