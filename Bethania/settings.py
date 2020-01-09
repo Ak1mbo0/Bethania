@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
+import django_heroku
 import os
 PROJECT_DIR=os.path.dirname(__file__)
 
@@ -150,5 +151,5 @@ EMBED_VIDEO_BACKENDS = (
     'embed_video.backends.YoutubeBackend',
 )
 
-
-
+# Configure Django App for Heroku.
+django_heroku.settings(locals())
