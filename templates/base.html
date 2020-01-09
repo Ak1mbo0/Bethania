@@ -13,7 +13,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width; user-scalable=yes">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Base</title>
     {% block head %}
     {% endblock %}
 </head>
@@ -45,11 +44,20 @@
 
     {% endblock %}
 
-    <footer class="site-footer" style="padding-top: 15px; background-color: #000046;">
+    <footer class="site-footer">
 
-        <div class="footer-text" style="margin: auto 0;font-size: 14px;">
-            <a> Colégio Santa Cruz - © 2019 EFGL OBAOBA3 Inc. S.A.</a> <br>
-            <a> Av. Arruda Botelho, 255 Alto de Pinheiros - SP</a>
+        <div class="footer-text">
+            <p> Colégio Santa Cruz - © 2019 EFGLT Satatas Inc. S.A.</p>
+            <p> Av. Arruda Botelho, 255 Alto de Pinheiros - SP</p>
+        </div>
+
+        <div id="div-logo-footer">
+            <img id="logo-footer" src="{% static "imagens/folha.png" %}" alt="">
+        </div>
+
+        <div id="footer-telefone">
+            <p id="telefone-lixo">+55 (11) 3024-5199</p>
+            <p>colegio@santacruz.g12.br</p>
         </div>
 
     </footer>
