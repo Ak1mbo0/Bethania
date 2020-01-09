@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     "upload",
     "search",
     "videos",
-    "files"
+    "files",
+    "contatos",
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,324 @@
+{% extends "base.html" %}
+
+{% block head %}
+
+    {% load static %}
+    <title>Contatos</title>
+
+    <style>
+
+    .title-colaboradores {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2vw;
+}
+
+#first-block{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5vh;
+}
+
+#first-block-content {
+    width: 60vw;
+    height: 60vh;
+    background-color: rgb(0,42,88);
+    margin-top: 4vh;
+}
+
+#first-block-content-title {
+    color: white;
+    font-size: 2vw;
+    text-align: center;
+    margin-top: 7vh;
+    height: 5vh;
+}
+
+#first-block-content-triad {
+    width: 100%;
+    {#margin-top: 3vh;#}
+    height: 59vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 5vh;
+}
+
+#second-block {
+    background-color: #f3f3f3;
+}
+
+.group-three {
+    width: 100vw;
+    display: flex;
+	flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+#first-three {
+    margin-top: 5vh;
+
+}
+
+#second-three {
+    margin-top: 3vh;
+
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 1s;
+  margin: 0 3vw 0 3vw;
+  width: 15vw;
+  height: 40vh;
+
+}
+
+.card:hover {
+    transform: scale(1.02);
+    transition: 1s;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container h4, .container p {
+    text-align: center;
+}
+
+
+
+.container-card-us{
+	width:100vw;
+    padding-bottom: 5vh;
+
+
+}
+
+.imagens-cards {
+    width: 15vw;
+    height: 32vh;
+}
+
+/*Flip cards e outras zueiras*/
+
+#beth-card {
+    background-color: transparent;
+width: 15vw;
+  height: 40vh;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+
+.flip-card-inner {
+  position: relative;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+    width: 15vw;
+  height: 40vh;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    width: 15vw;
+  height: 40vh;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: transparent;
+  transform: rotateY(180deg);
+  width: 15vw;
+  height: 40vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.flip-card-back p{
+    width: 80%;
+    margin: auto;
+}
+
+
+    .icons-contatos {
+        width: 3vw;
+        height: 3vw;
+        margin-top: 10vh;
+
+    }
+
+    .conjunto-imagem-texto{
+        display: flex;
+        flex-direction:column;
+        justify-content:center;
+        text-align: center;
+        width:20vh;
+        margin-bottom: 15vh;
+
+    }
+.imagem-contato-azul{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3vh;
+
+}
+
+.imagem-contato-azul img {
+    width: 3vw;
+    height: 3vw;
+}
+
+.letra-texto-contato{
+    color:white;
+    font-size:1.5vh;
+    text-align:center;
+}
+    #texto-telefone{
+        font-size: 2vh;
+    }
+    #texto-email{
+        font-size: 1.8vh;
+    }
+
+    #triangulo-branco{
+        width: 7vw;
+        height: auto;
+        position: relative;
+        bottom: 2vh;
+        left: 46.5vw;
+        margin: auto;
+
+    }
+
+
+    </style>
+
+{% endblock %}
+
+
+{% block content %}
+
+    <div id="first-block">
+        <div id="first-block-content">
+            <div id="first-block-content-title">Informações para contato</div>
+            <div  id="first-block-content-triad">
+                <div class="conjunto-imagem-texto">
+
+                    <div class="imagem-contato-azul" id="imagem-endereco"><img src="{% static "imagens/localizacao.png" %}"></div>
+                    <div class="letra-texto-contato" id="texto-endereco"> Av. Arruda Botelho, 255 Alto de Pinheiros - SP</div>
+
+                </div>
+            <div class="conjunto-imagem-texto">
+
+                    <div class="imagem-contato-azul" id="imagem-telefone"><img src="{% static "imagens/telefone.png" %}"></div>
+                    <div class="letra-texto-contato" id="texto-telefone"> +55 (11) 3024-5199 </div>
+
+                </div>
+            <div class="conjunto-imagem-texto">
+
+                    <div class="imagem-contato-azul"  id="imagem-email"><img src="{% static "imagens/email.png" %}"></div>
+                    <div class="letra-texto-contato" id="texto-email"> bethfisica@gmail.com </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="second-block">
+        <img src="{% static "imagens/trinagulo-branco.png"  %}" alt="" id="triangulo-branco">
+    <h2 class="title-colaboradores">Colaboradores</h2>
+
+    <div class='container-card-us'>
+	<div class="group-three" id="first-three">
+
+        <div class="card flip-card" id="beth-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+	  <img src="{% static "imagens/colaboradores/beth.jpg" %}" alt="Avatar" style="width:100%" class="imagens-cards">
+	  <div class="container">
+	    <h4><b>Elizabeth Zaki</b></h4>
+	    <p>Professora & Colaboradora</p>
+	  </div>
+                </div>
+                <div class="flip-card-back">
+
+                    <p>Possui graduação em Licenciatura em Física pelo Instituto de Física da Universidade de São Paulo (2000) e mestrado em Ensino de Ciências pelo Instituto de Física da Universidade de São Paulo (2006). Desde 2000 é professora de Física no Colégio Santa Cruz. Tem experiência na área de Física, com ênfase em ensino de Física, atuando principalmente no ensino médio.</p>
+
+                </div>
+            </div>
+	</div>
+
+	<div class="card">
+	  <img src="{% static "imagens/colaboradores/duds.jpg" %}" alt="Avatar" style="width:100%" class="imagens-cards">
+	  <div class="container">
+	    <h4><b>Eduardo Wagner(Filé)</b></h4>
+	    <p>Aluno & Criador</p>
+	  </div>
+	</div>
+
+	<div class="card">
+	  <img src="{% static "imagens/colaboradores/tei.jpg" %}" alt="Avatar" style="width:100%" class="imagens-cards">
+	  <div class="container">
+	    <h4><b>Felipe Millner</b></h4>
+	    <p>Aluno & Criador</p>
+	  </div>
+	</div>
+        </div>
+
+        <div class="group-three" id="second-three">
+	<div class="card">
+	  <img src="{% static "imagens/colaboradores/arruda.jpg" %}" alt="Avatar" style="width:100%" class="imagens-cards">
+	  <div class="container">
+	    <h4><b>Gustavo Hallal</b></h4>
+	    <p>Aluno & Criador</p>
+	  </div>
+	</div>
+
+	<div class="card">
+	  <img src="{% static "imagens/colaboradores/zon.jpg" %}" alt="Avatar" style="width:100%" class="imagens-cards">
+	  <div class="container">
+	    <h4><b>Luís Carvalho</b></h4>
+	    <p>Aluno & Criador</p>
+	  </div>
+	</div>
+
+	<div class="card">
+	  <img src="{% static "imagens/colaboradores/gurgel.jpg" %}" alt="Avatar" style="width:100%" class="imagens-cards">
+	  <div class="container">
+	    <h4><b>Tomaz Frigerio</b></h4>
+	    <p>Aluno & Criador</p>
+	  </div>
+	</div>
+
+    </div>
+</div>
+    </div>
+
+
+{% endblock %}
+
