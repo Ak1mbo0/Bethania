@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "videos",
     "files",
     "contatos",
+    "heroku"
 ]
 
 MIDDLEWARE = [
