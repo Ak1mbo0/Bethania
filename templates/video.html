@@ -24,13 +24,17 @@
         <div class="bloco" id="primeiro-bloco">
             <h3 class="title-periodos">1º Período</h3>
             <div class="bloco-content">
+
                 {% for video in videos %}
-                    {% if video.Periodo == "1" and video.Status == "p" %}
-                        {% video video.Video as my_video %}
-                <iframe id="1" class="videos" src="{{ my_video.url }}"></iframe>
-                        {% endvideo %}
-                    {% endif %}
-                {% endfor %}
+                        {% if video.Periodo == "1" and video.Status == "p" %}
+                            {% video video.Video as my_video %}
+                    <iframe id="1" class="videos" src="{{ my_video.url }}"></iframe>
+                            {% endvideo %}
+                        {% endif %}
+                    {% endfor %}
+
+
+
             </div>
 
         </div>
@@ -39,26 +43,30 @@
         <div class="bloco" id="segundo-bloco">
             <h3 class="title-periodos">2º Período</h3>
             <div class="bloco-content">
-                {% for video in videos %}
-                    {% if video.Periodo == "2" and video.Status == "p" %}
-                        {% video video.Video as my_video %}
-                <iframe id="1" class="videos" src="{{ my_video.url }}"></iframe>
-                        {% endvideo %}
-                    {% endif %}
-                {% endfor %}
+
+                    {% for video in videos %}
+                        {% if video.Periodo == "2" and video.Status == "p" %}
+                            {% video video.Video as my_video %}
+                    <iframe id="1" class="videos" src="{{ my_video.url }}"></iframe>
+                            {% endvideo %}
+                        {% endif %}
+                    {% endfor %}
+
             </div>
         </div>
 
         <div class="bloco" id="terceiro-bloco">
             <h3 class="title-periodos">3º Período</h3>
             <div class="bloco-content">
-                {% for video in videos %}
-                    {% if video.Periodo == "3" and video.Status == "p" %}
-                        {% video video.Video as my_video %}
-                <iframe id="1" class="videos" src="{{ my_video.url }}"></iframe>
-                        {% endvideo %}
-                    {% endif %}
-                {% endfor %}
+
+                    {% for video in videos %}
+                        {% if video.Periodo == "3" and video.Status == "p" %}
+                            {% video video.Video as my_video %}
+                    <iframe id="1" class="videos" src="{{ my_video.url }}"></iframe>
+                            {% endvideo %}
+                        {% endif %}
+                    {% endfor %}
+
             </div>
         </div>
 

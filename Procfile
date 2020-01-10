@@ -1,1 +1,1 @@
-web: guicorn Bethania.wsgi
+web: gunicorn Bethania.wsgi
