@@ -1,0 +1,19 @@
+Ha finally! I had the same issue and just fixed mine. Was looking for a place to put the fix up. I've had the power button loose for a while, like a month or two, and it was causing the volume in the speakers to cut out or dim. Of course pushing the power button around would mitigate it for a time. But it was still a pain.
+
+Ok, it is an easy fix but you are going to need two screwdrivers, and something to cover speaker. I used the ear covers. One TINY Phillips screwdriver to get the screws under the speaker cover out. and a flathead to actually fix the issue.
+
+Shut off the headset, unplug it, and remove the battery by popping off the right outer ear cover and using the Flathead to pop the battery out by the tiny lip on the top. Once the battery is out unhook the coupling. Gently, it won't break easily but just be careful.
+
+This will be the second hardest part: removing the screws on the left speaker. The hardest part will be getting them back in. Remove the left ear cover by tugging it around and popping it off. Get your tiny phillps, I think the holes are like 1/8 inch, and remove the screws. Cover the speaker with an outer ear cover or something else! If they fall in you will have a devil of a time getting them out as the speaker is magnetized heavily and has a plastic cover with holes! There are six screws around the speak so loosen or remove them all and remove the speaker. Don't pull too hard as the speaker wire is hard connected on both ends. Though it is a few inches long. Remove any screws still in the holes and set the speaker to the side.
+
+The easy part! The actual fix. You get to learn from me. I actually removed the button circuit board which was a pain. So you don't have to. Nah the fix is easy. Where the power switch is there is a small box that holds the switch. It has a thin plastic covering with a gold stripe.
+
+Now why the power switch gets loose and fails. The switch uses a simple metal bar that is molded so the switch snaps from one position to the next with a little indent for the 'snap' part. Each time you snap it the bar moves just a little. Over time it will bend outwards from the force you put on the 'snap' part of the bar. Since this is holding the switch tight to the circuit it will loosen and wiggle as the bar gets bent outwards making the circuit fail.
+
+The Fix: Take a flathead screwdriver and firmly press it back. Just align the flat on the bar and press a few times along the bar from one end to the other. Not much. If you are marking up the plastic film over the bar you are pressing to hard. Press firmly and gently just to move it back into place.
+
+Congrats you fixed it! Now your switch shouldn't be loose. Test the power button. It shouldn't wiggle anymore. If it does just press a little more till it just moves very slightly as the button actually goes into the headset and covers the actual switch so there should be a little movement as they are two separate things.
+
+4: Clean up: Put the speaker back on. Cover the speaker again! and put the screws back in. You don't need to really tighten them. Just gently screw them till they stop turning. Cover the speaker for each one or you will spend 30 minutes trying to get a screw that is magnetized to the speaker out from under the plastic speaker cover with holes just big enough for a screw to fall in but not big enough for anything bigger than needle nose tweezers. And I don't have any.
+
+Put the ear cover back on, put the battery back in, and the outer covers back on. Your Logitech G933 Artemis is ready to go!
