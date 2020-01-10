@@ -1,0 +1,302 @@
+html, body {
+    position: relative;
+    z-index: -100;
+}
+
+.slick-container {
+    width: 90vw;
+    height: 36vw;
+    margin: auto;
+
+}
+
+.slick-item{
+    width: 90vw;
+    height: 36vw;
+}
+
+.slick-slide {
+    margin: 0 10vw 0 10vw;
+}
+
+.slick-item img {
+    width: 100%;
+    height: 36vw;
+}
+
+.fase {
+    width: 100vw;
+}
+
+#fase1 {
+    background-color: #f5f5f5;
+    padding-top: 6vh;
+    padding-bottom: 5vh;
+}
+
+#fase2 {
+    width: 100vw;
+    height: auto;
+    background-color: lightgray;
+    position: relative;
+
+}
+
+#triangulo {
+    width: 5vw;
+    height: auto;
+    margin-top: -0.6vw;
+    margin-left: 47.3vw;
+    z-index: 2;
+    position: absolute;
+}
+
+#bolinhas {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 2;
+}
+
+
+
+#title-2{
+    text-align: center;
+    font-weight: bold;
+    padding-top: 4vh;
+    font-size: 3vw;
+    z-index: 10;
+    position: relative;
+}
+
+.cards-container {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    margin: auto;
+    border: 1px;
+    padding-bottom: 10vh;
+
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.cards {
+    width: 40vw;
+    height: 35vh;
+    background-color: rgb(255,255,255);
+    margin: 8vh 3vw 0 3vw;
+    justify-content: center;
+    /*border-radius: 5vh;*/
+    display: flex;
+    flex-direction: row;
+    z-index: 10;
+}
+
+
+#card1 {
+    flex-shrink: 1;
+
+}
+
+#card2 {
+    flex-shrink: 1;
+}
+
+#card3 {
+    flex-shrink: 3;
+}
+
+#card4 {
+    flex-shrink: 3;
+}
+
+.card-title {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2vh;
+    font-size: 2vw;
+}
+
+.card-text {
+    margin-top: 4vh;
+    width: 50%;
+    font-size: 1.18vw;
+}
+
+.cards p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.bt-cartao {
+    width: 10vw;
+    height: 5.5vh;
+    margin: auto;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1vw;
+    line-height: 1.6vw;
+    transition: 1s;
+}
+
+.bt-cartao:hover {
+    color: whitesmoke;
+    transform: translate(5px, 5px);
+    box-shadow: none;
+    transition: 1s;
+}
+
+#bt-fichas {
+    background: linear-gradient(to right, #4d4dff,#000080);
+}
+
+#bt-videos {
+    background: linear-gradient(to right, #27B5B5, #5F958B);
+}
+
+#bt-relatorio {
+    background: linear-gradient(to right, rgb(179,225,53), rgb(123,164,7));
+}
+
+#bt-contato {
+    background: linear-gradient(to right, #d68072, #a17573);
+}
+
+.faixa {
+    height: 100%;
+    width: 0.4vw;
+    background-color: #0575e6;
+}
+
+.card-semi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 26.1vw;
+}
+
+#faixa1 {
+    background: linear-gradient(to bottom,  #4d4dff,#000080);
+}
+
+#faixa2 {
+    background: linear-gradient(to bottom, #27B5B5, #5F958B);
+}
+
+#faixa3 {
+    background: linear-gradient(to bottom, rgb(179,225,53), rgb(123,164,7));;
+}
+
+#faixa4 {
+    background: linear-gradient(to bottom, #d68072, #a17573);
+}
+
+.icons {
+    height: 11.5vw;
+    margin: auto 0 auto 2vw ;
+}
+
+ul.slick-dots{
+    text-align: center;
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 1px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    padding-left: 0px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+    width: 20px;
+    height: 2px;
+}
+
+.slick-dots li button:before {
+    content: '';
+    font-size: 22px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    margin-top: -5.7vh;
+    height: 3px;
+    text-align: center;
+    opacity: 1;
+    color: black;
+    background:#dedede;
+}
+
+.slick-dots li.slick-active button:before {
+    background: #f5d33b;
+    opacity: 1 !important;
+}
+
+.arrow {
+    width: 1vw;
+    height: auto;
+    position: absolute;
+}
+
+#seta-direita {
+    display: block;
+    width: 3vw;
+    position: absolute;
+    top: 35vh;
+    right: 5vw;
+    background-image: linear-gradient(to right, #000046, #0575e6 );
+    border-radius: 1.5vw;
+    z-index: 70;
+}
+
+#seta-esquerda {
+    display: block;
+    width: 3vw;
+    position: absolute;
+    left: 5vw;
+    background-image: linear-gradient(to right, #0575e6 , #000046);
+    top: 35vh;
+
+    border-radius: 1.5vw;
+    z-index: 70;
+}
+
+#seta-esquerda img {
+    display: block;
+    width: 100%;
+}
+
+#seta-direita img {
+    display: block;
+    width: 100%;
+}
+
+@media (min-width: 1900px){
+
+    .bt-cartao {
+        height: 4.2vh;
+    }
+
+    .cards {
+        height: 28vh;
+        margin-bottom: 7.2vh;
+    }
+
+}
+
