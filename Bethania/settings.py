@@ -142,7 +142,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(PROJECT_DIR, 'home/static')
+STATIC_ROOT = os.path.join(PROJECT_DIR, '/staticfiles/')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'fichas')
 

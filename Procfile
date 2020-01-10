@@ -1,1 +1,1 @@
-web: gunicorn Bethania.wsgi
+web: gunicorn Bethania.wsgi --log-file -
