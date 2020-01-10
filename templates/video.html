@@ -3,12 +3,15 @@
     {% block head %}
         {% load embed_video_tags %}
         {% load static %}
+
         <link rel="stylesheet" href="{% static "video_style.css" %}">
+
         <title>Vídeos</title>
 
     {% endblock %}
 
     {% block content %}
+
 
         <div id="div-gelo">
 
@@ -19,10 +22,9 @@
         </div>
 
 
-
-
         <div class="bloco" id="primeiro-bloco">
-            <h3 class="title-periodos">1º Período</h3>
+            <img src="{% static "imagens/trinagulo-branco.png" %}" alt="" id="triangulo-branco">
+            <h3 class="title-periodos" id="title-1periodo">1º Período</h3>
             <div class="bloco-content">
                 {% for video in videos %}
                     {% if video.Periodo == "1" and video.Status == "p" %}

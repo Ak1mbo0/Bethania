@@ -10,12 +10,15 @@
     flex-direction: row;
     flex-wrap: nowrap;
 
-
 }
 
 
 .bt-gelo {
-    margin-top: 2vh;
+    text-align: center;
+    height: 5.2vh !important;
+    line-height: 5.2vh;
+    padding-top: 1vh;
+    display: inline-block;
 }
 
 #div-gelo div {
@@ -43,6 +46,10 @@
     width: 100vw;
     font-weight: bold;
     font-size: 1.5vw;
+}
+
+#title-1periodo {
+    margin-top: -6vh !important;
 }
 
 .bloco-content {
@@ -95,3 +102,11 @@
     color: grey;
 }
 
+#triangulo-branco{
+    width: 7vw;
+    height: auto;
+    position: relative;
+    bottom: 2vh;
+    left: 46.5vw;
+    margin: auto;
+    }
