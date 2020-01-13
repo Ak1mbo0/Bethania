@@ -15,9 +15,15 @@
 
         <div id="div-gelo">
 
-            <div class="content"><a class="btn btncursos btndsia btn__active bt-cartao bt-gelo" href="/fichas" id="bt-gelo-1">Fichas</a></div>
-            <div class="content"><a class="btn btncursos btndsia btn__active bt-cartao bt-gelo" href="/videos" id="bt-gelo-2">Vídeos</a></div>
-            <div class="content"><a class="btn btncursos btndsia btn__active bt-cartao bt-gelo" href="/" id="bt-gelo-3">Aulas</a></div>
+            <div class="content"><form method="get">
+                <input type="submit" value="Fichas">
+                <input type="text" name="view_filter" hidden="hidden" value="visualizar_fichas">
+            </form></div>
+            <div class="content"><form method="get">
+                <input type="submit" value="Videos">
+                <input type="text" name="view_filter" hidden="hidden" value="visualizar_videos">
+            </form></div>
+            <div class="content"><a class="btn btncursos btndsia bt-cartao bt-gelo" href="/" id="bt-gelo-3">Aulas</a></div>
 
         </div>
 
@@ -27,33 +33,65 @@
             <h3 class="title-periodos" id="title-1periodo">1º Período</h3>
             <div class="bloco-content">
 
-                {% for video in videos %}
-                        {% if video.Periodo == "1" and video.Status == "p" %}
-                            {% video video.Video as my_video %}
-                    <iframe id="1" class="videos" src="{{ my_video.url }}"></iframe>
-                            {% endvideo %}
+                {% if view_filter == 'visualizar_videos' %}
+                    {% for video in videos %}
+                            {% if video.Status == "p" %}
+                                {% video video.Video as my_video %}
+                        <iframe id="1" class="videos" src="{{ my_video.url }}"></iframe>
+                                {% endvideo %}
+                            {% endif %}
+                        {% endfor %}
+                {% endif %}
+
+                {% if view_filter == 'visualizar_fichas' %}
+                    {% for ficha in fichas %}
+                        {% if ficha.Status == "p" %}
+                            <table class="table">
+                                <tbody>
+                                    {% if ficha.Status == "p" %}
+                                        <tr>
+                                            <td>{{ ficha.Titulo }}</td>
+                                            <td> <a href="{{ ficha.Documento.url }}" target="_blank"> Acessar </a></td>
+                                        </tr>
+                                    {% endif %}
+                                </tbody>
+                            </table>
                         {% endif %}
                     {% endfor %}
-
-
-
+                {% endif %}
             </div>
-
         </div>
-
 
         <div class="bloco" id="segundo-bloco">
             <h3 class="title-periodos">2º Período</h3>
             <div class="bloco-content">
 
+                {% if view_filter == 'visualizar_videos' %}
                     {% for video in videos %}
-                        {% if video.Periodo == "2" and video.Status == "p" %}
-                            {% video video.Video as my_video %}
-                    <iframe id="1" class="videos" src="{{ my_video.url }}"></iframe>
-                            {% endvideo %}
+                            {% if video.Status == "p" %}
+                                {% video video.Video as my_video %}
+                        <iframe id="1" class="videos" src="{{ my_video.url }}"></iframe>
+                                {% endvideo %}
+                            {% endif %}
+                        {% endfor %}
+                {% endif %}
+
+                {% if view_filter == 'visualizar_fichas' %}
+                    {% for ficha in fichas %}
+                        {% if ficha.Status == "p" %}
+                            <table class="table">
+                                <tbody>
+                                    {% if ficha.Status == "p" %}
+                                        <tr>
+                                            <td>{{ ficha.Titulo }}</td>
+                                            <td> <a href="{{ ficha.Documento.url }}" target="_blank"> Acessar </a></td>
+                                        </tr>
+                                    {% endif %}
+                                </tbody>
+                            </table>
                         {% endif %}
                     {% endfor %}
-
+                {% endif %}
             </div>
         </div>
 
@@ -61,16 +99,33 @@
             <h3 class="title-periodos">3º Período</h3>
             <div class="bloco-content">
 
+                {% if view_filter == 'visualizar_videos' %}
                     {% for video in videos %}
-                        {% if video.Periodo == "3" and video.Status == "p" %}
-                            {% video video.Video as my_video %}
-                    <iframe id="1" class="videos" src="{{ my_video.url }}"></iframe>
-                            {% endvideo %}
+                            {% if   video.Status == "p" %}
+                                {% video video.Video as my_video %}
+                        <iframe id="1" class="videos" src="{{ my_video.url }}"></iframe>
+                                {% endvideo %}
+                            {% endif %}
+                        {% endfor %}
+                {% endif %}
+
+                {% if view_filter == 'visualizar_fichas' %}
+                    {% for ficha in fichas %}
+                        {% if ficha.Status == "p" %}
+                            <table class="table">
+                                <tbody>
+                                    {% if ficha.Status == "p" %}
+                                        <tr>
+                                            <td>{{ ficha.Titulo }}</td>
+                                            <td> <a href="{{ ficha.Documento.url }}" target="_blank"> Acessar </a></td>
+                                        </tr>
+                                    {% endif %}
+                                </tbody>
+                            </table>
                         {% endif %}
                     {% endfor %}
-
+                {% endif %}
             </div>
         </div>
-
     {% endblock %}
 

@@ -14,6 +14,7 @@ class Ficha(models.Model):
     Documento = models.FileField(upload_to='pdf/')
     Status = models.CharField(max_length=1, choices=STATUS_CHOICES, default='h')
     Tipo = models.CharField(max_length=40, default='Ficha')
+    Periodo = models.CharField(max_length=2, default=1)
 
     def __str__(self):
         return self.Titulo
@@ -23,7 +24,6 @@ class Video(models.Model):
     Video = EmbedVideoField(verbose_name="Video")
     Titulo = models.CharField(max_length=40)
     Tema = models.CharField(max_length=40)
-    Periodo = models.CharField(max_length=2, default= 1)
     Status = models.CharField(max_length=1, choices=STATUS_CHOICES, default='h')
     Tipo = models.CharField(max_length=40, default='Video')
 

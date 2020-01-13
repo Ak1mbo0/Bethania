@@ -19,7 +19,7 @@ from django.conf.urls.static import static
 from django.urls import path
 from home import views as home
 from search import views as search
-from videos.views import Video_list_view
+from videos.views import visualizar_view
 from files.views import files_page
 from contatos.views import contatos_page
 
@@ -29,7 +29,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", home.home_page),
     path("search/", search.query),
-    path("videos/", Video_list_view.as_view()),
+    path("videos/", visualizar_view),
     path("fichas/", files_page),
     path("contatos/", contatos_page)
 ]
