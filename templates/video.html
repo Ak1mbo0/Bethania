@@ -33,7 +33,7 @@
             <h3 class="title-periodos" id="title-1periodo">1º Período</h3>
             <div class="bloco-content">
 
-                {% if view_filter == 'visualizar_videos' %}
+               0 {% if view_filter == 'visualizar_videos' %}
                     {% for video in videos %}
                         {% if video.Periodo == '1' and video.Status == "p" %}
                                 {% video video.Video as my_video %}
