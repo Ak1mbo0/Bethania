@@ -16,11 +16,11 @@
         <div id="div-gelo">
 
             <div class="content"><form method="get">
-                <input type="submit" value="Fichas">
+                <input type="submit" value="Fichas" class="btn btncursos btndsia bt-cartao bt-gelo" id="bt-gelo-1">
                 <input type="text" name="view_filter" hidden="hidden" value="visualizar_fichas">
             </form></div>
             <div class="content"><form method="get">
-                <input type="submit" value="Videos">
+                <input type="submit" value="Videos" class="btn btncursos btndsia bt-cartao bt-gelo" id="bt-gelo-2" >
                 <input type="text" name="view_filter" hidden="hidden" value="visualizar_videos">
             </form></div>
             <div class="content"><a class="btn btncursos btndsia bt-cartao bt-gelo" href="/" id="bt-gelo-3">Aulas</a></div>
@@ -35,7 +35,7 @@
 
                 {% if view_filter == 'visualizar_videos' %}
                     {% for video in videos %}
-                            {% if video.Status == "p" %}
+                        {% if video.Periodo == '1' and video.Status == "p" %}
                                 {% video video.Video as my_video %}
                         <iframe id="1" class="videos" src="{{ my_video.url }}"></iframe>
                                 {% endvideo %}
@@ -48,7 +48,7 @@
                         {% if ficha.Status == "p" %}
                             <table class="table">
                                 <tbody>
-                                    {% if ficha.Status == "p" %}
+                                    {% if ficha.Periodo == '1' and ficha.Status == "p" %}
                                         <tr>
                                             <td>{{ ficha.Titulo }}</td>
                                             <td> <a href="{{ ficha.Documento.url }}" target="_blank"> Acessar </a></td>
@@ -68,7 +68,7 @@
 
                 {% if view_filter == 'visualizar_videos' %}
                     {% for video in videos %}
-                            {% if video.Status == "p" %}
+                            {% if video.Periodo == '2' and video.Status == "p" %}
                                 {% video video.Video as my_video %}
                         <iframe id="1" class="videos" src="{{ my_video.url }}"></iframe>
                                 {% endvideo %}
@@ -78,15 +78,13 @@
 
                 {% if view_filter == 'visualizar_fichas' %}
                     {% for ficha in fichas %}
-                        {% if ficha.Status == "p" %}
+                         {% if ficha.Periodo == '2' and ficha.Status == "p" %}
                             <table class="table">
                                 <tbody>
-                                    {% if ficha.Status == "p" %}
                                         <tr>
                                             <td>{{ ficha.Titulo }}</td>
                                             <td> <a href="{{ ficha.Documento.url }}" target="_blank"> Acessar </a></td>
                                         </tr>
-                                    {% endif %}
                                 </tbody>
                             </table>
                         {% endif %}
@@ -101,7 +99,7 @@
 
                 {% if view_filter == 'visualizar_videos' %}
                     {% for video in videos %}
-                            {% if   video.Status == "p" %}
+                            {% if video.Periodo == '3' and video.Status == "p" %}
                                 {% video video.Video as my_video %}
                         <iframe id="1" class="videos" src="{{ my_video.url }}"></iframe>
                                 {% endvideo %}
@@ -111,7 +109,7 @@
 
                 {% if view_filter == 'visualizar_fichas' %}
                     {% for ficha in fichas %}
-                        {% if ficha.Status == "p" %}
+                        {% if ficha.Periodo == '3' and ficha.Status == "p" %}
                             <table class="table">
                                 <tbody>
                                     {% if ficha.Status == "p" %}
