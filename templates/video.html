@@ -25,8 +25,12 @@
                 {% if view_filter == 'visualizar_videos' %}
                 <input type="submit" value="Fichas" class="btn btncursos btndsia bt-cartao bt-gelo bt-gelo-inactive" id="bt-gelo-1">
                 {% endif %}
+                {% if view_filter == 'visualizar_aulas' %}
+                <input type="submit" value="Fichas" class="btn btncursos btndsia bt-cartao bt-gelo bt-gelo-inactive" id="bt-gelo-1">
+                {% endif %}
                 <input type="text" name="view_filter" hidden="hidden" value="visualizar_fichas">
             </form></div>
+
             <div class="content"><form method="get">
                 {% if 'view_filter' not in request.GET %}
                 <input type="submit" value="Videos" class="btn btncursos btndsia bt-cartao bt-gelo bt-gelo-inactive" id="bt-gelo-2">
@@ -37,9 +41,26 @@
                 {% if view_filter == 'visualizar_videos' %}
                 <input type="submit" value="Videos" class="btn btncursos btndsia bt-cartao bt-gelo bt-gelo-active" id="bt-gelo-2">
                 {% endif %}
+                {% if view_filter == 'visualizar_aulas' %}
+                <input type="submit" value="Videos" class="btn btncursos btndsia bt-cartao bt-gelo bt-gelo-inactive" id="bt-gelo-2">
+                {% endif %}
                 <input type="text" name="view_filter" hidden="hidden" value="visualizar_videos">
             </form></div>
-            <div class="content"><a class="btn btncursos btndsia bt-cartao bt-gelo bt-gelo-inactive" href="/videos/?view_filter=visualizar_videos" id="bt-gelo-3">Aulas</a></div>
+            <div class="content"><form method="get">
+                {% if 'view_filter' not in request.GET %}
+                <input type="submit" value="Aulas" class="btn btncursos btndsia bt-cartao bt-gelo bt-gelo-inactive" id="bt-gelo-3">
+                {% endif %}
+                {% if view_filter == 'visualizar_fichas' %}
+                <input type="submit" value="Aulas" class="btn btncursos btndsia bt-cartao bt-gelo bt-gelo-inactive" id="bt-gelo-3">
+                {% endif %}
+                {% if view_filter == 'visualizar_videos' %}
+                <input type="submit" value="Aulas" class="btn btncursos btndsia bt-cartao bt-gelo bt-gelo-inactive" id="bt-gelo-3">
+                {% endif %}
+                {% if view_filter == 'visualizar_aulas' %}
+                <input type="submit" value="Aulas" class="btn btncursos btndsia bt-cartao bt-gelo bt-gelo-active" id="bt-gelo-3">
+                {% endif %}
+                <input type="text" name="view_filter" hidden="hidden" value="visualizar_aulas">
+            </form></div>
 
         </div>
 
@@ -68,6 +89,23 @@
                                         <tr>
                                             <td id="titulo-ficha">{{ ficha.Titulo }}</td>
                                             <td> <a href="{{ ficha.Documento.url }}" target="_blank"> Acessar </a></td>
+                                        </tr>
+                                    {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                {% endif %}
+
+                {% if view_filter == 'visualizar_aulas' %}
+                    <table class="table">
+                        <tbody>
+                        {% for aula in aulas %}
+                            {% if aulas.Status == "p" %}
+                                    {% if aula.Periodo == '1' and aula.Status == "p" %}
+                                        <tr>
+                                            <td id="titulo-ficha">{{ aula.Titulo }}</td>
+                                            <td> <a href="{{ aula.Documento.url }}" target="_blank"> Acessar </a></td>
                                         </tr>
                                     {% endif %}
                             {% endif %}
@@ -108,6 +146,23 @@
                         </tbody>
                     </table>
                 {% endif %}
+
+                {% if view_filter == 'visualizar_aulas' %}
+                    <table class="table">
+                        <tbody>
+                        {% for aula in aulas %}
+                            {% if aulas.Status == "p" %}
+                                    {% if aula.Periodo == '2' and aula.Status == "p" %}
+                                        <tr>
+                                            <td id="titulo-ficha">{{ aula.Titulo }}</td>
+                                            <td> <a href="{{ aula.Documento.url }}" target="_blank"> Acessar </a></td>
+                                        </tr>
+                                    {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                {% endif %}
             </div>
         </div>
 
@@ -141,6 +196,23 @@
                         </tbody>
                     </table>
                 {% endif %}
+
+                {% if view_filter == 'visualizar_aulas' %}
+                    <table class="table">
+                        <tbody>
+                        {% for aula in aulas %}
+                            {% if aulas.Status == "p" %}
+                                    {% if aula.Periodo == '3' and aula.Status == "p" %}
+                                        <tr>
+                                            <td id="titulo-ficha">{{ aula.Titulo }}</td>
+                                            <td> <a href="{{ aula.Documento.url }}" target="_blank"> Acessar </a></td>
+                                        </tr>
+                                    {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                {% endif %}
             </div>
         </div>
 
@@ -155,9 +227,6 @@
                 btn.addClass('bt-gelo-inactive');
                 btn.removeClass('bt-gelo-active');
             }});
-</script>
-
-        <script>
 
         $('#bt-gelo-1 ').click(function () {
 			btn = $('#bt-gelo-1');
@@ -169,6 +238,15 @@
                 btn.removeClass('bt-gelo-active');
             }})
 
+        $('#bt-gelo-3 ').click(function () {
+			btn = $('#bt-gelo-3');
+			if (btn.hasClass('bt-gelo-inactive')) {
+                btn.addClass('bt-gelo-active');
+                btn.removeClass('bt-gelo-inactive');
+                btn = $('#bt-gelo-3');
+                btn.addClass('bt-gelo-inactive');
+                btn.removeClass('bt-gelo-active');
+            }})
 
 
     </script>

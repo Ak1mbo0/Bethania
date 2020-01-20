@@ -34,3 +34,14 @@ class Video(models.Model):
     def get_absolute_url(self):
         return reverse("posts:detail", kwargs={"pk": self.pk})
 
+class Aula(models.Model):
+    Titulo = models.CharField(max_length=40)
+    Tema = models.CharField(max_length=40, null=True)
+    Documento = models.FileField(upload_to='pdf/')
+    Status = models.CharField(max_length=1, choices=STATUS_CHOICES, default='h')
+    Tipo = models.CharField(max_length=40, default='Aula')
+    Periodo = models.CharField(max_length=1, default=1)
+
+    def __str__(self):
+        return self.Titulo
+

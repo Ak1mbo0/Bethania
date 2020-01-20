@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from upload.models import Video, Ficha
+from upload.models import Video, Ficha, Aula
 # Create your views here.
 
 
@@ -18,6 +18,13 @@ def visualizar_view(request):
             video = Video.objects.all()
             return render(request, 'video.html', {
                 "videos": video,
+                "view_filter": view_filter,
+            })
+        elif view_filter == 'visualizar_aulas':
+            print(view_filter)
+            aula = Aula.objects.all()
+            return render(request, 'video.html', {
+                "aulas": aula,
                 "view_filter": view_filter,
             })
 
