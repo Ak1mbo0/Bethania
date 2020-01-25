@@ -22,6 +22,9 @@ def query(request):
                 'search_term': search_term,
                 'search_filter': search_filter
             })
+        else:
+            raise ValueError("Certifique que escreveste 'Ficha' ou 'Video'")
+
     else:
         return render(request, 'query.html')
 

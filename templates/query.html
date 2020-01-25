@@ -41,11 +41,11 @@
                    aria-label="Search"
                    name="search"
                    required="required">
-            <input name="Document" list="document" placeholder="Escolha o tipo de arquivo" required="required" value="Ficha">
-            <datalist id="document" >
-                    <option value="Ficha">
-                    <option value="Video">
-            </datalist>
+            <input name="Document" list="document" placeholder="Escolha o tipo de arquivo" required="required" >
+            <select id="document" name="Document" contenteditable="false" >
+                <option value="Ficha">Ficha</option>
+                <option value="Video">Video</option>
+            </select>
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-bt">Search</button>
         </form>
 
