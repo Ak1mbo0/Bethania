@@ -1,6 +1,6 @@
 .bloco {
     width: 100vw;
-    min-height: 60vh;
+    min-height: 48vh;
 }
 
 #div-gelo {
@@ -12,6 +12,9 @@
 
 }
 
+#bt-gelo-1, #bt-gelo-2 {
+    margin-top: 2.5vh;
+}
 
 .bt-gelo {
     text-align: center;
@@ -19,6 +22,16 @@
     line-height: 5.2vh;
     padding-top: 1vh;
     display: inline-block;
+}
+
+.bt-gelo-active {
+    background: linear-gradient(to right, #27B5B5, #5F958B);
+    color: white;
+}
+
+.bt-gelo-inactive {
+    background: linear-gradient(to right, #f3f3f3, #dedede);
+    color: grey;
 }
 
 #div-gelo div {
@@ -54,7 +67,7 @@
 
 .bloco-content {
     width: 100vw;
-    height: 60vh;
+    min-height: 48vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -93,14 +106,6 @@
     transition: 1s;
 }
 
-#bt-gelo-2 {
-    background: linear-gradient(to right, #27B5B5, #5F958B);
-}
-
-#bt-gelo-1, #bt-gelo-3 {
-    background: linear-gradient(to right, #f3f3f3, #dedede);
-    color: grey;
-}
 
 #triangulo-branco{
     width: 7vw;
@@ -110,3 +115,11 @@
     left: 46.5vw;
     margin: auto;
     }
+
+.table {
+    margin-top: 2vh;
+}
+
+#titulo-ficha {
+    padding-left: 4vw;
+}
