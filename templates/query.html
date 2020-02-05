@@ -24,6 +24,7 @@
             background-color: white !important;
         }
 
+
     </style>
     {% endblock %}
 </head>
@@ -41,8 +42,8 @@
                    aria-label="Search"
                    name="search"
                    required="required">
-            <input name="Document" list="document" placeholder="Escolha o tipo de arquivo" required="required" >
-            <select id="document" name="Document" contenteditable="false" >
+            <select class="custom-select" name="Document" id="document">
+                <option selected>Escolha o que pesquisar</option>
                 <option value="Ficha">Ficha</option>
                 <option value="Video">Video</option>
             </select>
