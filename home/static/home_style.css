@@ -287,6 +287,11 @@ ul.slick-dots{
     width: 100%;
 }
 
+.cards {
+        height: 28vh;
+        margin-bottom: 7.2vh;
+    }
+
 @media (min-width: 1900px){
 
     .bt-cartao {
